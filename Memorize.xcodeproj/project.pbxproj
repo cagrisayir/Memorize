@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063C2B9D2B2854110050D415 /* MemorizeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C2B9C2B2854110050D415 /* MemorizeGame.swift */; };
 		064E1FA42B27743000F60426 /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064E1FA32B27743000F60426 /* MemorizeApp.swift */; };
 		064E1FA62B27743000F60426 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064E1FA52B27743000F60426 /* ContentView.swift */; };
 		064E1FA82B27743100F60426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064E1FA72B27743100F60426 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		063C2B9C2B2854110050D415 /* MemorizeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGame.swift; sourceTree = "<group>"; };
 		064E1FA02B27743000F60426 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064E1FA32B27743000F60426 /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
 		064E1FA52B27743000F60426 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063C2B9E2B2854330050D415 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				063C2B9C2B2854110050D415 /* MemorizeGame.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		064E1F972B27743000F60426 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +63,7 @@
 			children = (
 				064E1FA32B27743000F60426 /* MemorizeApp.swift */,
 				064E1FA52B27743000F60426 /* ContentView.swift */,
+				063C2B9E2B2854330050D415 /* Models */,
 				064E1FA72B27743100F60426 /* Assets.xcassets */,
 				064E1FA92B27743100F60426 /* Preview Content */,
 			);
@@ -139,6 +150,7 @@
 			files = (
 				064E1FA62B27743000F60426 /* ContentView.swift in Sources */,
 				064E1FA42B27743000F60426 /* MemorizeApp.swift in Sources */,
+				063C2B9D2B2854110050D415 /* MemorizeGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

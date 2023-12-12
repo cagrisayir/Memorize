@@ -10,40 +10,18 @@ import SwiftUI
 struct ContentView: View {
     let emojis: Array<String> = ["👻", "🎃", "🕷️", "👿", "💀", "☠️", "🕸️", "🧙", "😱", "🙀", "🍭", "👹"]
     
-    @State var cardCount = 4
-    
     var body: some View {
-        VStack {
-            ScrollView {
-                cards
-            }.scrollIndicators(.hidden)
-            Spacer()
-            cardCountAdjusters
-        }
-        .padding()
-    }
-    
-    var cardRemover: some View {
-        cardCountAdjuster(by: -1, symbol: "rectangle.stack.fill.badge.minus")
-    }
-    
-    var cardAdder: some View {
-        cardCountAdjuster(by: 1, symbol: "rectangle.stack.fill.badge.plus")
-    }
-    
-    var cardResetter: some View {
-        Button(action: {
-            cardCount = 4
-        }, label: {
-            HStack{
-                Image(systemName: "arrow.clockwise")
-            }
-        })
+        
+        ScrollView {
+            cards
+        }.scrollIndicators(.hidden)
+        
+            .padding()
     }
     
     var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
-            ForEach(0..<cardCount, id: \.self) {index in
+            ForEach(emojis.indices, id: \.self) {index in
                 CardView(content: emojis[index])
                     .aspectRatio(2/3, contentMode: .fit)
             }
@@ -51,30 +29,9 @@ struct ContentView: View {
         .foregroundColor(.orange)
     }
     
-    func cardCountAdjuster(by offset: Int, symbol: String) -> some View {
-        Button(action: {
-            cardCount += offset
-        }, label: {
-            Image(systemName: symbol)
-        })
-        .disabled(cardCount + offset < 1 || cardCount + offset > emojis.count)
-    }
     
-    var cardCountAdjusters: some View {
-        HStack {
-            cardRemover
-            
-            Spacer()
-            
-            cardResetter
-            
-            Spacer()
-            
-            cardAdder
-        }
-        .imageScale(.large)
-        .font(.largeTitle)
-    }
+    
+    
 }
 
 struct CardView: View {
